@@ -1,4 +1,13 @@
-<p class="atomic">19</p>
-<p class="symbol">K</p>
-<p class="name">Kalium</p>
-<p class="weight">39,098</p>
+<div class="element">
+    <div class="flip-inner">
+        <div class="flip-front">
+            <small class="atomic">{{ element.atomicNumber }}</small>
+            <h3 class="symbol">{{ element.symbol }}</h3>
+        </div>
+
+        <div class="flip-back">
+            <h3 class="name">{{ element.name }}</h3>
+            <small class="weight">{{ element.density }}</small>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,7 @@ export interface PeriodicTableElement {
     name: string;
     bondingType: string;
     standardState: string;
-    denisity: number;
+    density: number;
     groupBlock: string;
     block: string;
 }

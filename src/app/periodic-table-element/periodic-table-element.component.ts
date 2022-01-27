@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PeriodicTableElement } from '../interface/periodic-table-element';
 
 @Component({
   selector: 'app-periodic-table-element',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./periodic-table-element.component.scss']
 })
 export class PeriodicTableElementComponent implements OnInit {
+  @Input()
+  element!: PeriodicTableElement;
 
   constructor() { }
 
