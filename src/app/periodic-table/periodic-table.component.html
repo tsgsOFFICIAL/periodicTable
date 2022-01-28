@@ -1,5 +1,12 @@
 <h1>Periodic table</h1>
 
 <div class="elements">
+    <span class="big-block">
+        
+    </span>
+
+    <span class="small-block">
+
+    </span>
     <app-periodic-table-element *ngFor="let element of elements" [element]="element" [ngStyle]="{'grid-column': element.x, 'grid-row': element.y}"></app-periodic-table-element>
 </div>
