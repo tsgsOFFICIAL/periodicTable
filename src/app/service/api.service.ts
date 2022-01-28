@@ -11,6 +11,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   get(): Observable<PeriodicTableElement[]> {
-    return this.http.get<PeriodicTableElement[]>("https://periodic-table-elements-info.herokuapp.com/elements");
+    return this.http.get<PeriodicTableElement[]>("http://127.0.0.1:5000/api/elements");
   }
 }

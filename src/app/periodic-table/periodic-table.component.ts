@@ -19,7 +19,7 @@ export class PeriodicTableComponent implements OnInit {
       complete: if (this.elements.length >= 1) {
         // console.log(`We're ready for take-off!`);
         // console.log(this.elements[0]);
-        // console.log(elements[0]);
+        console.log(this.elements[4]);
       }
     });
   }

@@ -6,7 +6,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    border: 1px solid red;
     width: fit-content;
     margin: 3rem auto;
 }

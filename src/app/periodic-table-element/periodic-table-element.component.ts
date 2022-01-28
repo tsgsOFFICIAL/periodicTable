@@ -7,8 +7,7 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
   styleUrls: ['./periodic-table-element.component.scss']
 })
 export class PeriodicTableElementComponent implements OnInit {
-  @Input()
-  element!: PeriodicTableElement;
+  @Input() element!: PeriodicTableElement;
 
   constructor() { }
 

@@ -10,4 +10,7 @@ export interface PeriodicTableElement {
     density: number;
     groupBlock: string;
     block: string;
+    x: number;
+    y: number;
+    cpkHexColor: string;
 }

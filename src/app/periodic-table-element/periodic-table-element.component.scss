@@ -63,14 +63,52 @@
     transform: rotateY(180deg);
 }
 
-.gas {
-    background-color: green;
+.nonmetal {
+    background-color: rgb(182, 0, 0);
 }
 
-.solid {
-    background-color: darkorange;
+.alkali.metal {
+    background-color: rgb(133, 0, 190);
 }
 
-.liquid {
-    background-color: dodgerblue;
+.alkaline.earth.metal {
+    background-color: rgb(0, 122, 245);
 }
+
+.metal.transition {
+    background-color: rgb(187, 147, 46);
+}
+
+.metalloid {
+    background-color: rgb(151, 43, 97);
+}
+
+.metal {
+    background-color: rgb(88, 86, 86);
+}
+
+.halogen {
+    background-color: rgb(216, 140, 0);
+}
+
+.gas.noble {
+    background-color: rgb(63, 150, 63);
+}
+
+.lanthanoid {
+    background-color: rgb(36, 68, 68);
+}
+
+.actinoid {
+    background-color: rgb(11, 105, 11);
+}
+
+// .gas {
+//     background-color: green;
+// }
+// .solid {
+//     background-color: darkorange;
+// }
+// .liquid {
+//     background-color: dodgerblue;
+// }
