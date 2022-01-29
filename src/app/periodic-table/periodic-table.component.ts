@@ -10,6 +10,7 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
 export class PeriodicTableComponent implements OnInit {
   elements: PeriodicTableElement[] = [];
   selectedElement!: PeriodicTableElement;
+  selectedElementBool: boolean = false;
 
   constructor(private apiService: ApiService) { }
   
@@ -27,14 +28,8 @@ export class PeriodicTableComponent implements OnInit {
   onSelectedElementTypeChange(elementType: PeriodicTableElement) {
     this.selectedElement = elementType;
   }
-  // nonmetal
-  // alkali metal
-  // alkaline earth metal
-  // actinoid
-  // lanthanoid
-  // transition metal
-  // metal
-  // metalloid
-  // halogen
-  // noble gas
+
+  onSelectedElementBool(bool: boolean) {
+    this.selectedElementBool = bool;
+  }
 }

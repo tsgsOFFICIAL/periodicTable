@@ -9,6 +9,7 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
 export class PeriodicTableElementComponent implements OnInit {
   @Input() element!: PeriodicTableElement;
   @Output() selectedElementType = new EventEmitter<PeriodicTableElement>();
+  @Output() selectedElementBool = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -21,5 +22,9 @@ export class PeriodicTableElementComponent implements OnInit {
   
   onMouseLeave() {
     this.selectedElementType.emit(undefined);
+  }
+
+  onMouseClick() {
+    this.selectedElementBool.emit(true);
   }
 }

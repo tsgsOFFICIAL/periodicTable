@@ -2,7 +2,7 @@
 
 <div class="elements">
     <div class="big-block">
-        <div *ngIf="selectedElement; else info_block">
+        <div *ngIf="selectedElement || selectedElementBool; else info_block">
             <h2 class="h4">{{ selectedElement.name }} || {{ selectedElement.groupBlock }}</h2>
             <p>Group: {{ selectedElement.group }}</p>
             <p>Period: {{ selectedElement.period }}</p>
@@ -31,8 +31,8 @@
     </div>
 
     <div class="small-block">
-        <div class="legend noble-gas" *ngIf="!selectedElement">Noble Gas</div>
+        <div class="legend noble-gas" *ngIf="!selectedElement && !selectedElementBool">Noble Gas</div>
     </div>
 
-    <app-periodic-table-element *ngFor="let element of elements" [element]="element" [ngStyle]="{'grid-column': element.x, 'grid-row': element.y}" (selectedElementType)="onSelectedElementTypeChange($event)"></app-periodic-table-element>
+    <app-periodic-table-element *ngFor="let element of elements" [element]="element" [ngStyle]="{'grid-column': element.x, 'grid-row': element.y}" (selectedElementType)="onSelectedElementTypeChange($event)" (selectedElementBool)="onSelectedElementBool($event)"></app-periodic-table-element>
 </div>
