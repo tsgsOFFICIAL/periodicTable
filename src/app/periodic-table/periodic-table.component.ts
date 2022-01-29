@@ -9,7 +9,7 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
 })
 export class PeriodicTableComponent implements OnInit {
   elements: PeriodicTableElement[] = [];
-  selectedElementType: string = "";
+  selectedElement!: PeriodicTableElement;
 
   constructor(private apiService: ApiService) { }
   
@@ -24,8 +24,8 @@ export class PeriodicTableComponent implements OnInit {
     });
   }
 
-  onSelectedElementTypeChange(elementType: string) {
-    this.selectedElementType = elementType;
+  onSelectedElementTypeChange(elementType: PeriodicTableElement) {
+    this.selectedElement = elementType;
   }
   // nonmetal
   // alkali metal

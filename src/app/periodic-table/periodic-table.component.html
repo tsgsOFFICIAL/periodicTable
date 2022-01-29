@@ -2,8 +2,11 @@
 
 <div class="elements">
     <div class="big-block">
-        <div *ngIf="selectedElementType != ''; else info_block">
-            <p>{{ selectedElementType }}</p>
+        <div *ngIf="selectedElement; else info_block">
+            <h2 class="h4">{{ selectedElement.name }} || {{ selectedElement.groupBlock }}</h2>
+            <p>Group: {{ selectedElement.group }}</p>
+            <p>Period: {{ selectedElement.period }}</p>
+            <p>Atomic Mass: {{ selectedElement.atomicMass }}</p>
         </div>
 
         <ng-template #info_block>
@@ -28,7 +31,7 @@
     </div>
 
     <div class="small-block">
-        <div class="legend noble-gas" *ngIf="selectedElementType == ''">Noble Gas</div>
+        <div class="legend noble-gas" *ngIf="!selectedElement">Noble Gas</div>
     </div>
 
     <app-periodic-table-element *ngFor="let element of elements" [element]="element" [ngStyle]="{'grid-column': element.x, 'grid-row': element.y}" (selectedElementType)="onSelectedElementTypeChange($event)"></app-periodic-table-element>

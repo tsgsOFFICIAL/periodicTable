@@ -8,15 +8,18 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
 })
 export class PeriodicTableElementComponent implements OnInit {
   @Input() element!: PeriodicTableElement;
-  @Output() selectedElementType = new EventEmitter<string>();
+  @Output() selectedElementType = new EventEmitter<PeriodicTableElement>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onMouseOver(selectedElementType: string) {
-    this.selectedElementType.emit(selectedElementType);
+  onMouseOver(selectedElement: PeriodicTableElement) {
+    this.selectedElementType.emit(selectedElement);
   }
   
+  onMouseLeave() {
+    this.selectedElementType.emit(undefined);
+  }
 }
