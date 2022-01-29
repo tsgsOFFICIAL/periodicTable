@@ -11,13 +11,75 @@ h1 {
 }
 
 .big-block {
+    display: flex;
+    flex-flow: column nowrap;
     grid-column: 4 / span 8;
     grid-row: 1 / span 3;
-    border: 1px solid hotpink;
 }
 
 .small-block {
     grid-column: 15 / span 2;
     grid-row: 1;
-    border: 1px solid limegreen;
+}
+
+span {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.legend {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .5rem;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: .75rem;
+}
+
+.legend::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #b60000;
+}
+
+.alkali-metal::before {
+    background-color: #8500be;
+}
+
+.alkaline-earth-metal::before {
+    background-color: #007af5;
+}
+
+.metal-transition::before {
+    background-color: #bb932e;
+}
+
+.lanthanoid::before {
+    background-color: #244444;
+}
+
+.actinoid::before {
+    background-color: #0b690b;
+}
+
+.metal::before {
+    background-color: #585656;
+}
+
+.metalloid::before {
+    background-color: #972b61;
+}
+
+.halogen::before {
+    background-color: #d88c00;
+}
+
+.noble-gas::before {
+    background-color: #3f963f;
 }

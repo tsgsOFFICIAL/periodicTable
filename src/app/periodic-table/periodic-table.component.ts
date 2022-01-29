@@ -8,10 +8,10 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
   styleUrls: ['./periodic-table.component.scss']
 })
 export class PeriodicTableComponent implements OnInit {
+  elements: PeriodicTableElement[] = [];
+  selectedElementType: string = "";
 
   constructor(private apiService: ApiService) { }
-
-  elements: PeriodicTableElement[] = [];
   
   ngOnInit(): void {
     this.apiService.get().subscribe((elements: PeriodicTableElement[]) => {
@@ -19,9 +19,22 @@ export class PeriodicTableComponent implements OnInit {
       complete: if (this.elements.length >= 1) {
         // console.log(`We're ready for take-off!`);
         // console.log(this.elements[0]);
-        console.log(this.elements[4]);
+        // console.log(this.elements[4]);
       }
     });
   }
 
+  onSelectedElementTypeChange(elementType: string) {
+    this.selectedElementType = elementType;
+  }
+  // nonmetal
+  // alkali metal
+  // alkaline earth metal
+  // actinoid
+  // lanthanoid
+  // transition metal
+  // metal
+  // metalloid
+  // halogen
+  // noble gas
 }

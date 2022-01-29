@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { PeriodicTableElement } from '../interface/periodic-table-element';
 
 @Component({
@@ -8,10 +8,15 @@ import { PeriodicTableElement } from '../interface/periodic-table-element';
 })
 export class PeriodicTableElementComponent implements OnInit {
   @Input() element!: PeriodicTableElement;
+  @Output() selectedElementType = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onMouseOver(selectedElementType: string) {
+    this.selectedElementType.emit(selectedElementType);
+  }
+  
 }
